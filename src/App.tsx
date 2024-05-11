@@ -80,7 +80,14 @@ function App() {
         <motion.div
           variants={gridItemVariants}
           className="bg-slate-800 aspect-sqare rounded-lg justify-center flex items-center gap-10"
-        ></motion.div>
+        >
+          <motion.div
+            className="w-1/3 h-1/3 bg-orange-500 rounded-3xl cursor-grab aspect-square"
+            drag
+            dragConstraints={{ left: -125, right: 125, top: -125, bottom: 125 }}
+            dragTransition={{ bounceDamping: 10, bounceStiffness: 600 }}
+          />
+        </motion.div>
         <motion.div
           variants={gridItemVariants}
           className="bg-slate-800 aspect-sqare rounded-lg justify-center flex items-center gap-10"
