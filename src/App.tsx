@@ -55,7 +55,7 @@ function App() {
             transition={{
               duration: 5,
               ease: "easeInOut",
-              repeat: Infinity,
+              repeat: 2,
               delay: 1,
             }}
           />
@@ -63,7 +63,20 @@ function App() {
         <motion.div
           variants={gridItemVariants}
           className="bg-slate-800 aspect-sqare rounded-lg justify-center flex items-center gap-10"
-        ></motion.div>
+        >
+          <motion.button
+            whileTap={{ scale: 0.9 }}
+            whileHover={{
+              scale: 1.1,
+              backgroundColor: "white",
+              color: "black",
+            }}
+            transition={{ bounceDamping: 50, bounceStiffness: 100 }}
+            className="bg-emerald-600 w-1/2 py-4 rounded-lg text-gray-100  font-semibold text-2xl"
+          >
+            Subscribe
+          </motion.button>
+        </motion.div>
         <motion.div
           variants={gridItemVariants}
           className="bg-slate-800 aspect-sqare rounded-lg justify-center flex items-center gap-10"
