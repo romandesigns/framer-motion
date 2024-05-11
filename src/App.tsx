@@ -27,7 +27,20 @@ function App() {
         <motion.div
           variants={gridItemVariants}
           className="bg-slate-800 aspect-sqare rounded-lg justify-center flex items-center gap-10"
-        ></motion.div>
+        >
+          <motion.div
+            className="w-20 h-20 bg-slate-700 rounded-lg"
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeInOut", delay: 0.8 }}
+          />
+          <motion.div
+            className="w-20 h-20 bg-slate-700 rounded-full"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
+          />
+        </motion.div>
         <motion.div
           variants={gridItemVariants}
           className="bg-slate-800 aspect-sqare rounded-lg justify-center flex items-center gap-10"
