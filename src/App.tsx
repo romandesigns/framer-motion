@@ -44,7 +44,22 @@ function App() {
         <motion.div
           variants={gridItemVariants}
           className="bg-slate-800 aspect-sqare rounded-lg justify-center flex items-center gap-10"
-        ></motion.div>
+        >
+          <motion.div
+            className="w-20 h-20 bg-slate-700 rounded-full"
+            animate={{
+              scale: [1, 2, 2, 1],
+              rotate: [0, 90, 90, 0],
+              borderRadius: ["20%", "50%", "50%", "20%"],
+            }}
+            transition={{
+              duration: 5,
+              ease: "easeInOut",
+              repeat: Infinity,
+              delay: 1,
+            }}
+          />
+        </motion.div>
         <motion.div
           variants={gridItemVariants}
           className="bg-slate-800 aspect-sqare rounded-lg justify-center flex items-center gap-10"
